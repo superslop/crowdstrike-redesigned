@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "skills": {
+    "superslop": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop/SKILL.md",
+      "computedHash": "870c694caaab4554f023507d431afbcbd620cc77dbf32d81220114220eee9726"
+    },
+    "superslop-code": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop-code/SKILL.md",
+      "computedHash": "5f4e0596cd606d1517f4e0d91dcc75485ae9001991bf1eed3ced75ca09e20162"
+    },
+    "superslop-copywriting": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop-copywriting/SKILL.md",
+      "computedHash": "4a90bb2fe98e778a5062b06a9d669cfb4cf30ac004306095fa6a3daa8bb720ff"
+    },
+    "superslop-human": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop-human/SKILL.md",
+      "computedHash": "c510f7d862780533505c2d5c0e787712fb73e4afc2e5cac1d8e2c071c8b241f5"
+    },
+    "superslop-layoutmobile": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop-layoutmobile/SKILL.md",
+      "computedHash": "679fa66d468470edaf9aeff85e0bb11a6d5b94b96288f0250de6d3f61231a816"
+    },
+    "superslop-ui": {
+      "source": "superslop/superslop",
+      "sourceType": "github",
+      "skillPath": "skills/superslop-ui/SKILL.md",
+      "computedHash": "6981bb33d9ea0f8d746b994309e7ff89c240ae6fd8ff89a8d8117668b9d2d81c"
+    }
+  }
+}
