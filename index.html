@@ -46,6 +46,34 @@
     /* ============================================================================ */
 
     :root {
+      --bg-obsidian: #09090b;
+      --text-primary: #fafafa;
+      --text-lilac: #d8b4fe;
+      --text-indigo: #e0e7ff;
+      --cta-indigo: #4f46e5;
+    }
+
+    /* Set the primary canvas to deep space obsidian (#09090b) per Rule S-17 */
+    body {
+      background-color: #09090b;
+      color: #fafafa;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Subtle 32px x 32px Cyber Grid Canvas per superslop-ui Rule S-17 */
+    .slop-grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Quadruple Frosted Glassmorphism Card Surface per Rule S-4 & S-03 */
+    .slop-glass-card {
+      background: rgba(17, 24, 39, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
 
 </body>
 </html>
