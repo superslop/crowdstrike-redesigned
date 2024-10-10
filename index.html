@@ -116,6 +116,30 @@
     }
 
     /* Mandatory Reduced-Motion Safeguard for Pulsing Orbs & Transitions per Rule E-03 */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      ::before,
+      ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="slop-grid-bg min-h-screen antialiased selection:bg-purple-500 selection:text-white">
+  <!-- Skip to Main Content Link for Keyboard & Screen Reader Accessibility (Rule E-03) -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-full focus:bg-indigo-600 focus:px-6 focus:py-3 focus:text-sm focus:font-bold text-white"
+  >
+    Skip to CrowdStrikeRedesigned main content →
+  </a>
+
+  <!-- ============================================================================ -->
+  <!-- 🚀 LAYER 1: FLOATING GLASS PILL NAVBAR (SACRED 7-LAYER SAAS SCROLL) ✨       -->
 
 </body>
 </html>
