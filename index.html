@@ -206,6 +206,30 @@
         <button
           id="mobile-menu-btn"
           type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu-panel"
+          aria-label="Toggle navigation menu"
+          class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-white/15 bg-white/5 text-white hover:bg-white/10 lg:hidden"
+        >
+          <span aria-hidden="true" id="mobile-menu-icon">☰</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Responsive Mobile Navigation Drawer -->
+    <div
+      id="mobile-menu-panel"
+      class="slop-glass-card mx-auto mt-2 hidden max-w-5xl rounded-3xl p-4 lg:hidden"
+    >
+      <div class="flex flex-col gap-2">
+        <a
+          href="#bento-features"
+          class="inline-flex min-h-[44px] items-center rounded-full px-4 text-sm font-semibold text-[#e0e7ff] hover:bg-white/10"
+        >
+          <span aria-hidden="true" class="mr-2">✨</span> Cloud Defense Tapestry
+        </a>
+        <a
+          href="#history-chronicle"
 
 </body>
 </html>
