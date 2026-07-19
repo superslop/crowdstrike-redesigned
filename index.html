@@ -1183,6 +1183,66 @@
 
       // Check if the terminal element exists before proceeding
       if (!terminalEl) {
+        // Return the current scanIterationCount to the caller
+        return scanIterationCount;
+      }
+
+      // Increment the counter variable 'scanIterationCount' by 1 to advance to the next state
+      scanIterationCount += 1;
+
+      // ⚡ STEP 2: Select the current scenario from SYNERGY_SCAN_SCENARIOS using modulo arithmetic
+      const scenarioIndex = scanIterationCount % SYNERGY_SCAN_SCENARIOS.length;
+      const activeScenario = SYNERGY_SCAN_SCENARIOS[scenarioIndex];
+      const cleanPayload = sanitizeEndpointText(targetEndpoint);
+
+      // Clear existing terminal lines safely
+      terminalEl.textContent = '';
+
+      // Define the 4 ceremonial log lines to render in the terminal preview
+      const logLines = [
+        {
+          className: 'text-[#d8b4fe]',
+          text: `$ npx crowdstrike-redesigned-synergy --verify-channel "${cleanPayload}" --zero-bsod --turbo`,
+        },
+        {
+          className: 'text-zinc-300',
+          text: `🧠 [SANDBOX #${scanIterationCount} - STEP 01] Delving deeply into ${cleanPayload} inside isolated cloud micro-VM...`,
+        },
+        {
+          className: 'text-zinc-300',
+          text: `⚡ [SANDBOX #${scanIterationCount} - STEP 02] ${activeScenario.summary}...`,
+        },
+        {
+          className: 'text-emerald-300 font-semibold',
+          text: `✨ [SUCCESS] Protected ${activeScenario.anomaliesNeutralized.toLocaleString()} endpoints in ${activeScenario.durationMs}! Synergy Velocity: ${activeScenario.synergyBoost} 🚀`,
+        },
+      ];
+
+      // Initialize the loop counter variable 'i' to the integer value 0
+      let i = 0;
+
+      // Iterate over each log line item and append a safe paragraph element
+      while (i < logLines.length) {
+        // Retrieve the current line object at index 'i'
+        const lineItem = logLines[i];
+
+        // Create a new paragraph element for the terminal output line
+        const pNode = document.createElement('p');
+        pNode.className = lineItem.className;
+        pNode.textContent = lineItem.text;
+
+        // Append the paragraph node to the terminal container
+        terminalEl.appendChild(pNode);
+
+        // Increment the counter variable 'i' by 1 to advance to the next log line
+        i += 1;
+      }
+
+      // 💡 NOTE: Future enhancement opportunity — delve into quantum-ready eBPF hot-patching here! ✨
+
+      // ✨ STEP 3: Return the final computed scanIterationCount back to the calling function
+      return scanIterationCount;
+    } // ✨ End of runQuantumThreatDelve function
 
 </body>
 </html>
