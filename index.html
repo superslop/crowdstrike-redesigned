@@ -1244,5 +1244,125 @@
       return scanIterationCount;
     } // ✨ End of runQuantumThreatDelve function
 
+    /**
+     * ✨ replayJuly19IncidentTimeline
+     *
+     * This helper function delves into the historical July 19, 2024 timeline replay
+     * by rendering the exact 04:09 UTC push and 05:27 UTC revert diff inside the
+     * terminal preview card.
+     *
+     * @returns {boolean} True when the historical replay finishes rendering.
+     */
+    function replayJuly19IncidentTimeline() {
+      // 🧠 STEP 1: Locate the terminal output element in the DOM
+      const terminalEl = document.getElementById('terminal-output');
+      if (!terminalEl) {
+        // Return false if the terminal container is absent
+        return false;
+      }
+
+      // ⚡ STEP 2: Clear previous output and construct the chronological incident log lines
+      terminalEl.textContent = '';
+
+      const incidentLines = [
+        {
+          className: 'text-[#d8b4fe]',
+          text: '$ git log --grep="Channel File 291" --date=iso-strict --stat',
+        },
+        {
+          className: 'text-pink-300',
+          text: '🔥 [2024-07-19T04:09:00Z] PUSHED: C-00000291*.sys -> 21 IPC args passed to 20-arg array (Legacy BSOD Loop risk detected!)',
+        },
+        {
+          className: 'text-amber-300',
+          text: '🛡️ [2024-07-19T05:27:00Z] REVERTED: Rolled back faulty Channel File 291 after 78m & deployed CrowdStrikeRedesigned Bounds Guard!',
+        },
+        {
+          className: 'text-emerald-300 font-semibold',
+          text: '✨ [2026 REDESIGNED VERDICT] User-space schema attestation active — 04:09 UTC outage class permanently eradicated! 🚀',
+        },
+      ];
+
+      // Initialize the loop counter variable 'j' to the integer value 0
+      let j = 0;
+
+      // Append each historical timeline line safely to the terminal output
+      while (j < incidentLines.length) {
+        const entry = incidentLines[j];
+        const pNode = document.createElement('p');
+        pNode.className = entry.className;
+        pNode.textContent = entry.text;
+        terminalEl.appendChild(pNode);
+
+        // Increment the counter variable 'j' by 1
+        j += 1;
+      }
+
+      // ✨ STEP 3: Return true to the calling function
+      return true;
+    } // ✨ End of replayJuly19IncidentTimeline function
+
+    // ============================================================================
+    // 🚀 SUBSECTION 3.2: EVENT LISTENER REGISTRATION & MOBILE MENU SYNERGY ✨
+    // ============================================================================
+
+    /**
+     * ✨ initializeCyberSynergyUI
+     *
+     * This helper function delves into the UI initialization workflow by attaching
+     * accessible event listeners to the mobile navigation button, the Channel 291
+     * sandbox form, and the July 19, 2024 04:09 UTC replay button.
+     *
+     * @returns {boolean} True when initialization completes seamlessly.
+     */
+    function initializeCyberSynergyUI() {
+      // 🧠 STEP 1: Attach click listener to the mobile menu toggle button
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const mobilePanel = document.getElementById('mobile-menu-panel');
+      const mobileIcon = document.getElementById('mobile-menu-icon');
+
+      if (mobileBtn && mobilePanel && mobileIcon) {
+        mobileBtn.addEventListener('click', function handleMobileMenuToggle() {
+          // Determine whether the mobile menu is currently expanded
+          const isExpanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+          const nextState = !isExpanded;
+
+          // Update aria-expanded attribute and toggle visibility class
+          mobileBtn.setAttribute('aria-expanded', String(nextState));
+          mobilePanel.classList.toggle('hidden', !nextState);
+          mobileIcon.textContent = nextState ? '✕' : '☰';
+        });
+      }
+
+      // ⚡ STEP 2: Attach submit listener to the interactive Channel 291 sandbox form
+      const scanForm = document.getElementById('scan-form');
+      const domainInput = document.getElementById('target-domain-input');
+      const replayBtn = document.getElementById('replay-2024-btn');
+
+      if (scanForm && domainInput) {
+        scanForm.addEventListener('submit', function handleScanFormSubmit(event) {
+          // Prevent default page reload on form submission
+          event.preventDefault();
+
+          // Execute the quantum threat delve with the user's payload string
+          runQuantumThreatDelve(domainInput.value);
+        });
+      }
+
+      if (replayBtn) {
+        replayBtn.addEventListener('click', function handleReplayClick() {
+          // Trigger the July 19, 2024 (04:09 UTC -> 05:27 UTC) timeline replay
+          replayJuly19IncidentTimeline();
+        });
+      }
+
+      // ✨ STEP 3: Return true to indicate successful UI initialization
+      return true;
+    } // ✨ End of initializeCyberSynergyUI function
+
+    // Invoke the UI initialization function once the DOM is ready
+    initializeCyberSynergyUI();
+
+
 </body>
 </html>
